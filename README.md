@@ -1,0 +1,2 @@
+# TailorMate
+# TailorMate 🧵  TailorMate is a mobile application designed to simplify and organize the daily work of tailors. It provides an efficient way to manage customer information, store measurements, track orders, and keep everything organized in one place.  The app aims to replace traditional paper-based management with a modern, easy-to-use digital solution, helping tailors save time, reduce errors, and improve their workflow.
