@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Dark at the top, fading to blue at the bottom (like the prototype) -->
+<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle">
+    <gradient
+        android:angle="270"
+        android:centerColor="#0B1F4B"
+        android:endColor="#1E4FC2"
+        android:startColor="#050B1E" />
+</shape>

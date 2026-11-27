@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Hanger with a needle, drawn as a white outline icon -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="96dp"
+    android:height="96dp"
+    android:viewportWidth="96"
+    android:viewportHeight="96">
+
+    <!-- hook -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M48,40 L48,33 C54,31 58,27 58,21 C58,15 53,11 48,11 C43,11 39,15 39,20"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4" />
+
+    <!-- body -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M48,40 L10,68 C8,70 9,74 13,74 L83,74 C87,74 88,70 86,68 Z"
+        android:strokeColor="#FFFFFF"
+        android:strokeLineCap="round"
+        android:strokeLineJoin="round"
+        android:strokeWidth="4" />
+
+    <!-- needle -->
+    <path
+        android:fillColor="#00000000"
+        android:pathData="M70,46 L30,86"
+        android:strokeColor="#7FA6FF"
+        android:strokeLineCap="round"
+        android:strokeWidth="3" />
+</vector>
