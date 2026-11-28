@@ -27,6 +27,18 @@
             android:exported="false" />
 
         <activity
+            android:name=".GarmentSelectionActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MeasurementsActivity"
+            android:exported="false" />
+
+        <activity
+            android:name=".MeasurementHistoryActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".CustomersActivity"
             android:exported="false" />
 

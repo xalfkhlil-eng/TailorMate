@@ -5,4 +5,6 @@
     <color name="tm_background">#F4F6FB</color>
     <color name="tm_text_dark">#111827</color>
     <color name="tm_text_gray">#6B7280</color>
+    <color name="tm_card_stroke">#E5EAF3</color>
+    <color name="tm_selected_background">#EEF3FF</color>
 </resources>
