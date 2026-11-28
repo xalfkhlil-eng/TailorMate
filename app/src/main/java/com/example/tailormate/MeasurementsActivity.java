@@ -58,6 +58,17 @@ public class MeasurementsActivity extends AppCompatActivity {
                 startActivity(new Intent(this, CustomersActivity.class)));
         findViewById(R.id.btnSaveMeasurements).setOnClickListener(v -> saveMeasurements());
 
+        spCustomers.setOnItemSelectedListener(new android.widget.AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(android.widget.AdapterView<?> parent, View view,
+                                       int position, long id) {
+                loadLatestMeasurements(position);
+            }
+
+            @Override
+            public void onNothingSelected(android.widget.AdapterView<?> parent) { }
+        });
+
         loadMeasurementFields();
         loadCustomers();
     }
@@ -81,6 +92,37 @@ public class MeasurementsActivity extends AppCompatActivity {
         spCustomers.setEnabled(hasCustomers);
         findViewById(R.id.tvNoCustomers).setVisibility(hasCustomers ? View.GONE : View.VISIBLE);
         findViewById(R.id.btnSaveMeasurements).setEnabled(hasCustomers);
+    }
+
+    // Pre-fill the form with the customer's latest saved measurements for this garment.
+    // Empty fields stay empty when the customer has no previous measurement set.
+    private void loadLatestMeasurements(int position) {
+        for (EditText input : inputs) {
+            input.setText("");
+        }
+        etNotes.setText("");
+
+        if (position < 0 || position >= customers.size()) return;
+
+        Customer customer = customers.get(position);
+        MeasurementSet latest = db.getLatestSet(customer.getID(), garmentId);
+        if (latest == null) return;
+
+        java.util.Map<Long, Double> savedValues = new java.util.HashMap<>();
+        for (MeasurementSet.MeasurementValue value : latest.getValues()) {
+            savedValues.put(value.fieldId, value.value);
+        }
+
+        for (int i = 0; i < fields.size(); i++) {
+            Double value = savedValues.get(fields.get(i).getID());
+            if (value != null) {
+                inputs.get(i).setText(String.valueOf(value));
+            }
+        }
+
+        if (latest.getNotes() != null) {
+            etNotes.setText(latest.getNotes());
+        }
     }
 
     private void loadMeasurementFields() {
