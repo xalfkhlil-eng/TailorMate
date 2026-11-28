@@ -1,6 +1,7 @@
 package com.example.tailormate;
 
 import android.os.Bundle;
+import android.content.Intent;
 import android.view.Gravity;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -127,9 +128,10 @@ public class GarmentSelectionActivity extends AppCompatActivity {
             return;
         }
 
-        // The next step will use these values to open the dynamic measurement form.
-        Toast.makeText(this, "Selected: " + displayName(selectedGarmentName),
-                Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, MeasurementsActivity.class);
+        intent.putExtra("GARMENT_ID", selectedGarmentId);
+        intent.putExtra("GARMENT_NAME", selectedGarmentName);
+        startActivity(intent);
     }
 
     private String displayName(String name) {
