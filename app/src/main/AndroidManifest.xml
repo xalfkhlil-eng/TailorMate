@@ -31,6 +31,10 @@
             android:exported="false" />
 
         <activity
+            android:name=".MeasurementsActivity"
+            android:exported="false" />
+
+        <activity
             android:name=".CustomersActivity"
             android:exported="false" />
 
