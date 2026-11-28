@@ -40,7 +40,8 @@ public class DashboardActivity extends AppCompatActivity {
 
         findViewById(R.id.btnNewMeasure).setOnClickListener(v ->
                 startActivity(new Intent(this, GarmentSelectionActivity.class)));
-        findViewById(R.id.btnHistory).setOnClickListener(v -> comingSoon());
+        findViewById(R.id.btnHistory).setOnClickListener(v ->
+                startActivity(new Intent(this, MeasurementHistoryActivity.class)));
     }
 
     // 3. Reload the numbers every time we come back to this screen
@@ -53,7 +54,4 @@ public class DashboardActivity extends AppCompatActivity {
         tvTrial.setText(String.valueOf(db.countOrdersByStatus(Order.STATUS_READY_FOR_TRIAL)));
     }
 
-    private void comingSoon() {
-        Toast.makeText(this, "Coming soon", Toast.LENGTH_SHORT).show();
-    }
 }
