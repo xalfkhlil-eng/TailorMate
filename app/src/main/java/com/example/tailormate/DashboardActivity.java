@@ -38,7 +38,8 @@ public class DashboardActivity extends AppCompatActivity {
             startActivity(intent);
         });
 
-        findViewById(R.id.btnNewMeasure).setOnClickListener(v -> comingSoon());
+        findViewById(R.id.btnNewMeasure).setOnClickListener(v ->
+                startActivity(new Intent(this, GarmentSelectionActivity.class)));
         findViewById(R.id.btnHistory).setOnClickListener(v -> comingSoon());
     }
 
