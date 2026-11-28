@@ -51,7 +51,7 @@ public class GarmentSelectionActivity extends AppCompatActivity {
             card.setCardElevation(dp(1));
             card.setStrokeWidth(dp(1));
             card.setStrokeColor(ContextCompat.getColor(this, R.color.tm_card_stroke));
-            card.setCardBackgroundColor(ContextCompat.getColor(this, R.color.white));
+            card.setCardBackgroundColor(ContextCompat.getColor(this, android.R.color.white));
             card.setClickable(true);
             card.setFocusable(true);
 
@@ -117,7 +117,7 @@ public class GarmentSelectionActivity extends AppCompatActivity {
             card.setStrokeColor(ContextCompat.getColor(this,
                     selected ? R.color.tm_navy : R.color.tm_card_stroke));
             card.setCardBackgroundColor(ContextCompat.getColor(this,
-                    selected ? R.color.tm_selected_background : R.color.white));
+                    selected ? R.color.tm_selected_background : android.R.color.white));
         }
     }
 
